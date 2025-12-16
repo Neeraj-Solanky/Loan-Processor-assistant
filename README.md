@@ -100,18 +100,12 @@ The application will open in your web browser. Start by logging in or signing up
 
 ### 📝 File Structure
 
-  * `app.py` / `main.py`: Main application script handling navigation and component display.
+  * `app2.py`: Main application script handling navigation and component display.
   * `ai_chatbot.py`: Logic for query classification, Text-to-SQL generation, and LLM interaction.
   * `rag.py`: Implements Azure extraction, ChromaDB interaction, and the RAG query logic.
   * `upload_document.py`: Handles document upload, dynamic column creation, and data insertion into `loan_applicants`.
   * `missing_doc.py`: Contains logic for checking missing documents, email generation, and sending.
   * `Income_verifier.py`: Logic for income data extraction and discrepancy checking.
-  * `first_screen.py`: Handles weather API fetching and task display.
+  * `f2.py`: Handles weather API fetching and task display.
   * `login.py`: User authentication and signup logic.
   * `requirements.txt`: List of all Python dependencies.
-
-### ⚠️ Troubleshooting
-
-  * **`KeyError: 'id'` in `check_missing_documents`:** This occurs if the `get_pending_applicants()` function returns an empty list, meaning there are no applicants with `Status = 'Pending'` or `Status = NULL`. Ensure you have submitted an application via the "Upload Documents" screen, or check your `loan_applicants` table for valid entries.
-  * **Database Connection Issues:** Verify that the MySQL service is running and that the hardcoded credentials (`root`, `neeraj1503`, `loan_processor`) in the Python files match your server configuration.
-  * **Azure/Groq Errors:** Double-check that all keys in your `.env` file are correct and have the necessary permissions.
