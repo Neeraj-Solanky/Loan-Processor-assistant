@@ -14,7 +14,7 @@ DB_PASSWORD = "neeraj1503"
 DB_NAME = "loan_processor"
 
 # OpenWeather API Configuration
-OPENWEATHER_API_KEY = "bd5e378503939ddaee76f12ad7a97608"
+OPENWEATHER_API_KEY = "******************************"
 CITY = "Dallas,TX,US"
 
 def init_database():
@@ -133,3 +133,4 @@ if __name__ == "__main__":
     st.subheader("📋 Overview of Today's Tasks")
     tasks = fetch_todays_tasks(db)
     display_tasks(tasks)
+
